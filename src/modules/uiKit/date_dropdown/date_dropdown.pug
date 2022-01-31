@@ -1,0 +1,21 @@
+dropdown
+  input#toggle1(type='checkbox' checked='')
+  label.animate(for='toggle1')
+    | Select Dates
+    i.fa.fa-bars.float-right
+  ul.animate
+    // calendar
+    h1.center
+    .calendar
+      .group
+        p.left.pointer.minusmonth &laquo;
+        p.left.monthname.center.pointer
+        p.right.pointer.addmonth &raquo;
+      ul.group
+        li Mo
+        li Tu
+        li We
+        li Th
+        li Fr
+        li Sa
+        li Su

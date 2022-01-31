@@ -1,0 +1,13 @@
+@import url('./modules/uiKit/text_field/text_field.scss');
+@import url('./modules/uiKit/dropdown/dropdown.scss');
+@import url('./modules/uiKit/masked_tf/masked_tf.scss');
+@import url('./modules/uiKit/date_dropdown/date_dropdown.scss');
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
