@@ -13,14 +13,9 @@
     box-sizing: border-box;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.input:hover{
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: rgba(31, 32, 65, 0.75);
-    border: 1px solid rgba(31, 32, 65, 0.5);
-}
-.input:focus{
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: rgba(31, 32, 65, 0.75);
-    border: 1px solid rgba(31, 32, 65, 0.5);
+    &:hover:focus{
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        color: rgba(31, 32, 65, 0.75);
+        border: 1px solid rgba(31, 32, 65, 0.5);
+    }
 }

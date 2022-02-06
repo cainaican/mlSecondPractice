@@ -1,27 +1,112 @@
-select{
-    display: inline-block;
-    font-family: Montserrat, sans-serif;
-    outline: none;
-    padding: 0 15px;
-    color: rgba(31, 32, 65, 0.5);
-    width: 320px;
-    height: 44px;
-
-    background: #FFFFFF;
-    /* Dark 25% */
-
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
-}
-select:hover{
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: rgba(31, 32, 65, 0.75);
-    border: 1px solid rgba(31, 32, 65, 0.5);
-}
-select:focus{
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: rgba(31, 32, 65, 0.75);
-    border: 1px solid rgba(31, 32, 65, 0.5);
+.select{
+    &__input{
+        display: inline-block;
+        font-family: Montserrat, sans-serif;
+        outline: none;
+        padding-left: 14px;
+        width: 320px;
+        height: 44px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        line-height: 44px;
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: rgba(31, 32, 65, 0.75);
+        &:hover:focus{
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            color: rgba(31, 32, 65, 0.75);
+            border: 1px solid rgba(31, 32, 65, 0.5);
+        }
+        &::after{
+            content: url(/src/svg/expand_more.svg);
+            width: 44px;
+            line-height: 42px;
+            float: right;
+            text-align: center;
+        }
+    }
+    &.open{
+        .select{
+            &__input{
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border: 1px solid rgba(31, 32, 65, 0.5);
+            border-bottom: none;
+            }
+            &__dropdown{
+                list-style: none;
+                display: block;
+                position: absolute;
+                width: 320px;
+                border: 1px solid rgba(31, 32, 65, 0.5);
+                box-sizing: border-box;
+                box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+                background: #FFFFFF;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                &-item{
+                    font-family: Montserrat;
+                    font-weight: bold;
+                    padding-left: 14px;
+                    padding-right: 7px;
+                    font-size: 12px;
+                    line-height: 37px;
+                    text-transform: uppercase;
+                    color: #1F2041;
+                    & a{
+                        margin-top: 5px;
+                        text-align: center;
+                        line-height: 28px;
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: rgba(31, 32, 65, 0.5);
+                        float: right;
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid rgba(31, 32, 65, 0.25);
+                        box-sizing: border-box;
+                        border-radius: 22px;
+                    }
+                    & span{
+                        width: 30px;
+                        text-align: center;
+                        float: right;     
+                        font-weight: 800;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        color: #1F2041;
+                    }
+                    &:last-child{
+                        display: flex;
+                        justify-content: space-between;
+                        & a{
+                            width: 100%;
+                            height: 40px;
+                            font-family: Montserrat;
+                            border: none;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 12px;
+                            text-transform: uppercase;
+                            color: #BC9CFF;
+                            line-height: 40px;
+                            text-align: right;
+                            &:first-child{
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__dropdown{
+        display: none;
+    }
+    
 }

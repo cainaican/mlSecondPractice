@@ -1,11 +1,23 @@
-@import url('./modules/uiKit/text_field/text_field.scss');
-@import url('./modules/uiKit/dropdown/dropdown.scss');
-@import url('./modules/uiKit/masked_tf/masked_tf.scss');
-@import url('./modules/uiKit/date_dropdown/date_dropdown.scss');
+$Dark_Shade_100: #1F2041;
+$Dark_Shade_75: rgba(31, 32, 65, 0.75);
+$Dark_Shade_50: rgba(31, 32, 65, 0.5);
+$Dark_Shade_25: rgba(31, 32, 65, 0.25);
+$Dark_Shade_5: rgba(31, 32, 65, 0.05);
+$Purple: #BC9CFF;
+$Green: #6FCF97;
 
 @font-face {
-    font-family: 'Montserrat', sans-serif;
-    src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+    font-family: 'Montserrat';
+    src: url(./fonts/Montserrat/Montserrat-Regular.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(./fonts/Montserrat/Montserrat-Bold.ttf);
+    font-weight: bold;
+}
+body{
+    margin: 100px;
 }
 *{
     margin: 0;

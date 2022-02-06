@@ -32,6 +32,7 @@
   "dependencies": {
     "css-loader": "^6.5.1",
     "jquery": "^3.6.0",
+    "jquery-ui": "^1.13.1",
     "style-loader": "^3.3.1",
     "webpack-dev-server": "^4.7.3"
   }

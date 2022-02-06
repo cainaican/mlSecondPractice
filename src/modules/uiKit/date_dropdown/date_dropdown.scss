@@ -1,167 +1,31 @@
-/*dropdown*/
+.show__btn{
+  padding-left: 15px;
+  width: 150px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  color: rgba(31, 32, 65, 0.75);
+  &::after{
+    content: url(/src/svg/expand_more.svg);
+    width: 44px;
+    text-align: center;
+    float: right;
+  }
+}
 
-*{
-    box-sizing: border-box;
+.calendar{
+  width: 200px;
+  &__top{
+    display: flex;
+    justify-content: space-between;
   }
-  .float-right{
-    float: right;
-  }
-  .fa{
-   font-size: .8em;
-    line-height: 22px !important;
-  }
-  dropdown{
-     display: inline-block;
-     margin: 20px 50px; 
-  }
-  dropdown label, dropdown ul li{
-    display: block;
-    width: px;
-    background: #191919;
-    opacity: 0.9;
-    padding: 15px 20px;
-  }
-  dropdown label:hover, dropdown ul li:hover{
-    background: #4D4D4D;
-    color: white;
-    cursor: pointer;
-  }
-  dropdown label{
-    color: #B2B2B2;
-    /*border-left: 4px solid #1ABC9C;*/
-    border-radius: 0 5px 0 0; 
-    position: relative;
-    z-index: 2;
-  }
-  dropdown input{
-    display: none;
-  }
-  dropdown input ~ ul{
-    position: relative;
-    visibility: hidden;
-    opacity: 0;
-    top: -20px;
-    z-index: 1;
-  }
-  dropdown input:checked + label{
-    background: #4D4D4D;
-    color: white;
-  }
-  
-  dropdown input:checked ~ ul{
-    visibility: visible;
-    opacity: 1;
-    top: 0;
-  }
-  $colors: #FFFFFF, #0072B5, #2C3E50;
-  
-  @for $i from 1 through length($colors) {
-    dropdown ul li:nth-child(#{$i}) {
-      border-left: 4px solid nth($colors, $i);
-      .fa{
-        color: nth($colors, $i);
-      }
-      &:hover {
-          background: nth($colors, $i);
-          color: white;
-        .fa{
-          color: white; 
-        }
-      }
-    }
-  }
-  
-  .animate{
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -ms-transition: all .3s;
-    transition: all .3s;  
-    backface-visibility:hidden;
-    -webkit-backface-visibility:hidden; /* Chrome and Safari */
-    -moz-backface-visibility:hidden; /* Firefox */
-    -ms-backface-visibility:hidden; /* Internet Explorer */
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /*calendar*/
-  
-  @import url(https://fonts.googleapis.com/css?family=Lato:300);
-  * {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-  }
-  html, body, div, span, h1, h2, h3, p, a, form, nav, li, ul {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      vertical-align: baseline;
-  }
-  ul {
-      list-style-type: none;
-  }
-  .left {
-    float: left;
-  }
-  .right {
-    float: right;
-  }
-  .monthname {
-    width: 18em;
-    
-  }
-  .pointer {
-    cursor: pointer;
-  }
-  body {
-    font-family: 'Lato',sans-serif;
-    padding: 1em 0;
-  }
-  .group:after {
-      content: "";
-      display: table;
-      clear: both;
-  }
-  .calendar p {
-      margin-bottom: .5em;
-      color: #FFFFFF;
-  }
-  .calendar {
-      background: #222;
-      color: #ddd;
-      padding: .5em .5em 1em;
-      max-width: 20em;
-      min-height: 15em;
-      margin: .5em auto;
-      -webkit-border-radius: 5px;
-      border-radius: 5px;
-  }
-  .calendar li {
-      float: left;
-      width: -webkit-calc(100%/7);
-      text-align: center;
-      padding: .25em 0;
-      cursor: pointer;
-      border-bottom: 1px solid #444;
-  }
-  .calendar li:hover, .calendar li.red {
-      color: red;
-  }
-  .calendar li:nth-child(-n+7) {
-      color: #666;
-  }
-  .center {
-      text-align: center;
-  }
+}

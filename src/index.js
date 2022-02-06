@@ -1,2 +1,7 @@
 import './index.scss'
+import './modules/uiKit/text_field/text_field.scss'
+import './modules/uiKit/dropdown/dropdown.scss'
+import './modules/uiKit/masked_tf/masked_tf.scss'
+import './modules/uiKit/date_dropdown/date_dropdown.scss'
 import './modules/uiKit/date_dropdown/date_dropdown.js'
+import './modules/uiKit/dropdown/dropdown'
