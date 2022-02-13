@@ -1,0 +1,20 @@
+@import '../colors&types';
+
+.list{
+    list-style: none;
+    &__item{
+        position: relative;
+        height: 34px;
+        padding-left: 20px;
+        width: 240px;
+        line-height: 24px;
+        &::before{
+            position: absolute;
+            content: url('../../../svg/ellipse.svg');
+            width: 10px;
+            height: 10px;
+            top: 0;
+            left: 0;
+        }
+    }
+}

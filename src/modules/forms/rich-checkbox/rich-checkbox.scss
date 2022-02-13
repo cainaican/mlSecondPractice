@@ -1,0 +1,23 @@
+@import '../colors&types';
+
+.checkbox{
+    &-rich{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+    &__label-main{
+        font-size: 14px;
+        font-weight: bold;
+        width: 206px;
+        color: $Dark_Shade_75;
+        height: 24px;
+    }
+    &__label-desc{
+        font-family: inherit;
+        display: inline-block;
+        font-size: 12px;
+        line-height: 14px;
+        width: 206px;
+    }
+}

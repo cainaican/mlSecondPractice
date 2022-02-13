@@ -1,0 +1,33 @@
+@import '../colors&types';
+
+
+details summary::-webkit-details-marker {
+    display: none
+}
+details {
+    
+    & > summary {
+        margin-bottom: 20px;
+        list-style: none;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $Dark_Shade_100;
+        &::after{
+            content: url('../../../svg/expand_more.svg');
+            float: right;
+            width: 44px;
+            text-align: center; 
+        }
+    }
+    &[open] > summary::after{
+        content: url('../../../svg/expand_less.svg');
+    }
+}
+
+.details{
+    width: 266px;
+    &__item{
+        height: 30px;
+    }
+}

@@ -1,0 +1,23 @@
+@import '../../colors&types';
+
+.button{
+    &__transparent{
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            justify-content: center;
+            width: 95px;
+            height: 40px;
+            top: 2px;
+            left: 2px;
+            border-radius: 24px;
+            background: #fff;
+            z-index: 0;
+        }
+        & span{
+            color: $Purple !important;
+        }
+    }
+}
+

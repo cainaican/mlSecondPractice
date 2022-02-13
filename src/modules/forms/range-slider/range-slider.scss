@@ -1,0 +1,58 @@
+.noUi{
+    &-base{
+        position: absolute;
+        box-sizing: border-box;
+        border-radius: 5px;
+        z-index: 0;
+    }
+    &-connect{
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        border-radius: 6px;
+        height: 6px;
+        top: 1px;
+    }
+    &-connects{
+        z-index: 1;
+        height: 9px;
+        top: -2px;
+    }
+    &-target{        
+        & .noUi-connect{
+            border: 1px solid linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        }
+        width: 266px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+    }
+    &-horizontal{
+        height: 6px;
+        & .noUi-handle{
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            top: -6px;
+            right: -5px;
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border: 2px solid #FFFFFF;
+            border-radius: 10px;
+            box-shadow: none;
+        }
+    }
+    &-handle{
+        &-lower{
+            &::after{
+                display: none;
+            }
+            &::before{
+                display: none;
+            }
+        }
+        &-upper{
+            &::after{
+                display: none;
+            }
+            &::before{
+                display: none;
+            }
+        }
+    }
+}

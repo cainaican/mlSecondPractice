@@ -1,0 +1,32 @@
+@import '../colors&types';
+
+.rate{
+    display: flex;
+    justify-content: space-around;
+    width: 120px;
+    height: 24px;
+    transform: rotateY(180deg);
+    &__input{
+        -webkit-appearance: none;
+        appearance: none;
+        position: relative;
+        &:checked ~ .rate__label::after{
+            opacity: 1;
+        }
+        &:hover ~ .rate__label::after{
+            opacity: 1;
+        }
+    }
+    &__label{
+        cursor: pointer;
+        &::before{
+            position: absolute;
+            content: url('../../../svg/star.svg');
+        }
+        &::after{
+            content: url('../../../svg/star-purple.svg');
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+}

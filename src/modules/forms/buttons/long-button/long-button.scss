@@ -1,0 +1,21 @@
+@import '../../colors&types';
+
+.button{
+    &__long {
+        width: 320px !important;
+        &::after{
+            position: absolute;
+            content: url('../../../../svg/arrow_forward_white.svg');
+            width: 44px;
+            height: 44px;
+            right: 0;
+            top: 12px;
+            color: white;
+        }
+        & span{
+            letter-spacing: 0px !important;
+        }
+    }
+    
+}
+

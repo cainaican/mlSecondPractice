@@ -1,0 +1,53 @@
+@import '../colors&types';
+
+
+.checkbox{
+    position: relative;
+    &__input{
+        -webkit-appearance: none;
+        appearance: none;
+        position: absolute;
+        &:checked + .checkbox__label::before{
+            border: 1px solid $Purple;
+        }
+        &:checked + .checkbox__label::after{
+            opacity: 1;
+        }
+    }
+    &__label{
+        cursor: pointer;
+        padding-left: 30px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: $Dark_Shade_50;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            border: 1px solid $Dark_Shade_25;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+        &::after{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: url(../../../svg/checkbox.svg) no-repeat;
+            position: absolute;
+            opacity: 0;
+            top: 5px;
+            left: 5px;
+            z-index: 2;
+            transition: opacity .2s linear;
+        }
+    }
+}

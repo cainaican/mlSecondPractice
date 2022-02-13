@@ -1,0 +1,22 @@
+.options{
+    display: flex;
+    & img{
+        width: 42px;
+        height: 40px;
+        src: url('../../../svg/smile.svg');
+    }
+    &__desc{
+        margin-left: 13px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        color: rgba(31, 32, 65, 0.75);
+        &-item{
+            margin-bottom: 7px;
+            &:last-child{
+                font-weight: normal;
+            }
+        }
+    }
+}

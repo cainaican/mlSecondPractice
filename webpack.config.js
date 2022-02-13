@@ -18,17 +18,25 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.pug$/,
-                use: "pug-loader"
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                loader: 'file-loader',
+                options:{
+                    outputPath: '/images/',
+                    name: '[name].[ext]'
+                }
             },
             {
-                test: /\.scss$/,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
-                ]
-            }
+                test: /\.pug$/,
+                use: "pug-loader"
+            }, 
+            {
+                test: /\.(scss|css)$/,
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+            },
         ]
     }
 

@@ -1,0 +1,63 @@
+@import '../colors&types';
+
+
+.like-button{
+    position: relative;
+    &__input{
+        -webkit-appearance: none;
+        appearance: none;
+        position: absolute;
+        &:checked + .like-button__label::before{
+            border: 1px solid $Purple;
+        }
+        &:checked + .like-button__label::after{
+            opacity: 1;
+            color: $Purple;
+        }
+        &:checked + .like-button__label{
+            color: $Purple;
+        }
+    }
+    &__label{
+        display: block;
+        height: 20px;
+        cursor: pointer;
+        padding-left: 22px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 19px;
+        color: $Dark_Shade_25;
+        transition: color .2s linear;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: url(./images/like-grey.svg) no-repeat;
+            background-position: 4px 5px;
+            border: 1px solid $Dark_Shade_25;
+            box-sizing: border-box;
+            border-radius: 10px;
+            transition: border .2s linear;
+        }
+        &::after{
+            content: '';
+            display: block;
+            width: 40px;
+            height: 20px;
+            background: url(./images/like-purple.svg) no-repeat;
+            position: absolute;
+            opacity: 0;
+            top: 6px;
+            left: 5px;
+            z-index: 2;
+            transition: opacity .2s linear;
+        }
+    }
+}
